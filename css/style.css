@@ -1,0 +1,129 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px 0;
+  background-image: url('../images/grid-100.png');
+  background-size: auto;
+}
+
+/* Container for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Responsive grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.col {
+  flex: 1;
+  padding: 15px;
+}
+
+/* Header */
+header {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+header h1#logo {
+  background-image: url('../images/rspnsv-dsgn.png');
+  background-size: contain;
+  height: 100px; /* Adjust height as needed */
+  width: 100%; /* Full width */
+  background-repeat: no-repeat;
+  color: transparent; /* Hides the text */
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove padding */
+}
+
+header nav li {
+  margin: 0 15px; /* Space between nav items */
+}
+
+header nav li a {
+  font-size: 1.563rem; /* 25px in relative terms */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase; /* Transform text to uppercase */
+  text-decoration: none; /* No text decoration */
+}
+
+/* Try CSS Burger Menu Test */
+
+.header .menu-btn:checked ~ .menu {
+  border: 1px solid red;
+}
+
+.header .menu-icon {
+  border: 10px solid blue;
+}
+
+.header .menu-icon .navicon {
+
+}
+
+.header .menu-icon .navicon:before {
+  
+}
+
+.header .menu-icon .navicon:after {
+  content: '000oowEeE'
+}
+
+/* Hero */
+section.hero {
+background-color: rgba(255, 127, 206, .5);/* Set background opacity to 80% */
+}
+
+/* Media queries for small, medium, and large screens */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Small screens */
+    background-color: lime;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1200px) {
+  body {
+    font-size: 16px; /* Medium screens */
+    background-color: orange;
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 18px; /* Large screens */
+    background-color: aqua;
+  }
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* Add additional styles as needed */
