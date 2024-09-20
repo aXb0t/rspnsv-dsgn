@@ -75,7 +75,6 @@ header h1#logo {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
-  float: right;
   position: fixed;
   top: 100px;
 }
@@ -129,7 +128,6 @@ header h1#logo {
 /* header menu button checked does stuff */
 .header .menu-btn:checked ~ .menu {
   max-height: 240px;
-  float: right;
   position: fixed;
   top: 100px;
 }
@@ -159,6 +157,7 @@ header h1#logo {
   .header .menu {
     clear: both;
     max-height: 100%;
+    position: inherit;
   }
 
   header nav ul.menu {
