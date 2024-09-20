@@ -50,45 +50,137 @@ header h1#logo {
   color: transparent; /* Hides the text */
 }
 
-header nav ul {
-  display: flex;
-  justify-content: center; /* Center the nav items */
-  list-style: none; /* Remove default list styles */
-  padding: 0; /* Remove padding */
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
 }
 
-header nav li {
-  margin: 0 15px; /* Space between nav items */
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
 }
 
-header nav li a {
-  font-size: 1.563rem; /* 25px in relative terms */
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase; /* Transform text to uppercase */
-  text-decoration: none; /* No text decoration */
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #f4f4f4;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
 }
 
 /* Try CSS Burger Menu Test */
 
-.header .menu-btn:checked ~ .menu {
-  border: 1px solid red;
-}
-
 .header .menu-icon {
-  border: 10px solid blue;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  border: 1px solid blue;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
 }
 
 .header .menu-icon .navicon {
+  background: #FF0;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
 
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #F00;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
 .header .menu-icon .navicon:before {
-  
+  top: 5px;
 }
 
 .header .menu-icon .navicon:after {
-  content: '000oowEeE'
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+/* header menu button checked does stuff */
+.header .menu-btn:checked ~ .menu {
+  border: 1px solid red;
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+
+
+
+/* 48em = 768px */
+/* non-hidden menu on larger displays */
+@media (min-width: 48em) {
+
+  .header .menu {
+    clear: both;
+    max-height: 100%;
+  }
+
+  header nav ul.menu {
+    display: flex;
+    justify-content: center; /* Center the nav items */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    background: transparent;
+  }
+
+  header nav li {
+    margin: 0 15px; /* Space between nav items */
+  }
+
+  header nav li a {
+    font-size: 1.563rem; /* 25px in relative terms */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase; /* Transform text to uppercase */
+    text-decoration: none; /* No text decoration */
+  }
+
+  .header .menu-icon {
+    display: none;
+  }
 }
 
 /* Hero */
