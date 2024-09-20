@@ -127,6 +127,9 @@ header h1#logo {
 .header .menu-btn:checked ~ .menu {
   border: 1px solid red;
   max-height: 240px;
+  float: right;
+  position: fixed;
+  top: 100px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
