@@ -221,3 +221,56 @@ p {
 }
 
 /* Add additional styles as needed */
+
+/* Wrappers wrapping things in grids */
+
+div.wrapper div {
+  background-color: rgba(255, 127, 206, .5);
+  border: 1px solid darkred;
+  border-radius: 7px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.one {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+.three {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+.four {
+  grid-column: 3;
+  grid-row: 3;
+}
+.five {
+  grid-column: 2;
+  grid-row: 4;
+}
+.six {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+/* KP YT Tutorical Gird */
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr));
+}
+.box {
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1em;
+}
