@@ -75,6 +75,9 @@ header h1#logo {
   clear: both;
   max-height: 0;
   transition: max-height .2s ease-out;
+  float: right;
+  position: fixed;
+  top: 100px;
 }
 
 /* Try CSS Burger Menu Test */
@@ -125,7 +128,6 @@ header h1#logo {
 
 /* header menu button checked does stuff */
 .header .menu-btn:checked ~ .menu {
-  border: 1px solid red;
   max-height: 240px;
   float: right;
   position: fixed;
@@ -148,8 +150,6 @@ header h1#logo {
 .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
-
-
 
 
 /* 48em = 768px */
