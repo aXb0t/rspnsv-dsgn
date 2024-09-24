@@ -114,6 +114,41 @@ header {
   background-color: rgba(0,60,60,.3);
 }
 
+.process-list {
+  list-style-type: none; /* Remove default list style */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.process-list li {
+  display: block; /* Display list items as block */
+  font-size: 1rem; /* Relative size */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180"><circle cx="90" cy="90" r="80" fill="blue"/></svg>'); /* SVG as background */
+  background-size: 80px 80px; /* Set size of the image */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  padding-left: 80px; /* Space for the image */
+  margin-bottom: 1rem; /* Space between items */
+  border: 1px dashed red;
+}
+
+/* Desktop displays */
+@media (min-width: 768px) {
+  .process-list li {
+    display: inline-block; /* Align in order on desktop */
+    margin-right: 1rem; /* Space between items */
+  }
+}
+
+/* Mobile displays */
+@media (max-width: 767px) {
+  .process-list li {
+    display: block; /* Stack in order on mobile */
+    margin-bottom: 1rem; /* Space between items */
+  }
+}
+
+
+
 /* Pitch */
 #pitch {
   background-color: rgba(220,220,0,.3);
@@ -137,7 +172,11 @@ header {
     repeat(auto-fit, minmax(200px, 1fr));
 }
 .card.grid {
+  margin-block: 1em;
+  margin-inline: 1rem;
   padding: 1rem;
+  border: 1px solid black;
+  border-radius: 1em;
 }
 
 /* Contact */
