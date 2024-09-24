@@ -114,6 +114,7 @@ header {
   background-color: rgba(0,60,60,.3);
 }
 
+/* look into subgrids https://www.reddit.com/r/css/comments/1espuk7/aligning_unordered_lists_horizontally/ */
 .process-list {
   list-style-type: none; /* Remove default list style */
   padding: 0; /* Remove padding */
@@ -135,6 +136,7 @@ header {
 @media (min-width: 768px) {
   .process-list li {
     display: inline-block; /* Align in order on desktop */
+    width: calc((80% / 3) - 1rem); /* Equal division of the parent container */
     margin-right: 1rem; /* Space between items */
   }
 }
