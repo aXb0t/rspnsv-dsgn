@@ -83,15 +83,13 @@ h6 {
 
 div.wrap-row {
   width: 100%;
-  border: 1px dotted yellow;
+  /* border: 1px dotted yellow; */
 }
-
-
 
 div.container {
   max-width: 80%;
   margin-inline: auto;
-  border: 1px solid lime;
+  /* border: 1px solid lime; */
 }
 
 /* Header */
@@ -103,7 +101,7 @@ header {
 #hero {
   background-color: rgba(220,0,220,.3);
 }
-section.hero {
+#hero .container section.hero {
   min-height: 500px;
   background-color: rgba(60,0,60,.2);
 }
