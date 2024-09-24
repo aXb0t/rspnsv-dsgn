@@ -86,15 +86,7 @@ div.wrap-row {
   border: 1px dotted yellow;
 }
 
-#hero {
-  background-color: rgba(220,0,220,.3);
-}
-#ordered-list {
-  background-color: rgba(0,220,220,.3);
-}
-#pitch {
-  background-color: rgba(220,220,0,.3);
-}
+
 
 div.container {
   max-width: 80%;
@@ -102,15 +94,35 @@ div.container {
   border: 1px solid lime;
 }
 
+/* Header */
 header {
   min-height:115px;
 }
 
-.hero {
+/* Hero */
+#hero {
+  background-color: rgba(220,0,220,.3);
+}
+section.hero {
   min-height: 500px;
   background-color: rgba(60,0,60,.2);
 }
 
+/* Ordered List */
+#ordered-list {
+  background-color: rgba(0,220,220,.3);
+}
+#ordered-list .container section {
+  background-color: rgba(0,60,60,.3);
+}
+
+/* Pitch */
+#pitch {
+  background-color: rgba(220,220,0,.3);
+}
+#pitch .container section {
+  background-color: rgba(60,60,60,.3);
+}
 
 /* Cards section */
 .grid-container {
