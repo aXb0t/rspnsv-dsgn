@@ -121,10 +121,18 @@ section.hero {
   background-color: rgba(220,220,0,.3);
 }
 #pitch .container section {
-  background-color: rgba(60,60,60,.3);
+  background-color: rgba(60,60,0,.3);
 }
 
-/* Cards section */
+/* Services */
+#services {
+  background-color: rgba(220,0,0,.3);
+}
+#services .container section {
+  background-color: rgba(60,0,0,.3);
+}
+
+/* Services - Cards section */
 .grid-container {
   display: grid;
   grid-template-columns: 
@@ -132,4 +140,12 @@ section.hero {
 }
 .card.grid {
   padding: 1rem;
+}
+
+/* Contact */
+#contact {
+  background-color: rgba(0,0,220,.3);
+}
+#contact .container section {
+  background-color: rgba(0,0,60,.3);
 }
