@@ -83,8 +83,8 @@ h6 {
 
 div.wrap-row {
   width: 100%;
-  /* border: 1px dotted yellow; */
 }
+
 
 div.container {
   max-width: 80%;
@@ -95,6 +95,26 @@ div.container {
 /* Header */
 header {
   min-height:115px;
+}
+
+.angle-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="white"/></svg>');
+  --element-width: 10%;
+  background-size: var(--element-width);
+  background-repeat: no-repeat;
+  background-position: bottom left; /* Position background on bottom left corner */
+}
+.angle-bg.blue {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
+  --element-width: 10%;
+}
+.angle-bg.red {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
+  --element-width: 10%;
+}
+.angle-bg.green {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
+  --element-width: 10%;
 }
 
 /* Hero */
@@ -149,9 +169,8 @@ header {
   }
 }
 
-
-
 /* Pitch */
+
 #pitch {
   background-color: rgba(220,220,0,.3);
 }
@@ -172,10 +191,9 @@ header {
   display: grid;
   grid-template-columns: 
     repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1em;
 }
 .card.grid {
-  margin-block: 1em;
-  margin-inline: 1rem;
   padding: 1rem;
   border: 1px solid black;
   border-radius: 1em;
