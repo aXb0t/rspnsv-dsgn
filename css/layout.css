@@ -73,6 +73,11 @@ h6 {
   line-height: 1.2;
 }
 
+span.emphatic {
+  font-weight: 700; /* Thin text */
+  color: lightgray;
+}
+
 .wrapper {
   max-width: 80%;
   min-width: 480px;
@@ -117,14 +122,62 @@ header {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
 }
 
-
 /* Hero */
 #hero {
   background-color: rgba(220,0,220,.3);
 }
 #hero .container section.hero {
-  min-height: 500px;
   background-color: rgba(60,0,60,.2);
+}
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the image */
+}
+/* Media Breakpoints */
+@media (max-width: 1200px) {
+  #hero .container section.hero {
+    min-height: 600px;
+    display: flex;
+    flex-direction: row; /* Stack horizontally */
+  }
+  .hero.call-to-action {
+    flex: 1; /* Take equal space */
+  }
+  .hero.hero-image {
+    flex: 1; /* Take equal space */
+  }
+}
+
+@media (max-width: 992px) {
+  #hero .container section.hero {
+    min-height: 400px;
+    flex-direction: column; /* Stack vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  #hero .container section.hero {
+    min-height: 300px;
+    flex-direction: column; /* Stack vertically */
+  }
+}
+
+@media (max-width: 576px) {
+  #hero .container section.hero {
+    flex-direction: column; /* Stack vertically */
+  }
+}
+
+h2.hero-headline {
+  font-size: 1.5em;
+  text-transform: uppercase; /* Transform text to all caps */
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 200; /* Light weight */
+  color: #333; /* Adjust color as needed */
+  text-align: center; /* Center the text */
+  margin: 1em 0; /* Add some margin */
 }
 
 /* Ordered List */
