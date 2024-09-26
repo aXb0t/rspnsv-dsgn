@@ -106,16 +106,17 @@ header {
 }
 .angle-bg.blue {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="blue"/></svg>');
-  --element-width: 10%;
 }
 .angle-bg.red {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="red"/></svg>');
-  --element-width: 10%;
 }
 .angle-bg.green {
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="green"/></svg>');
-  --element-width: 10%;
 }
+.angle-bg.gray {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><polygon points="0,20 20,20 0,0" fill="rgb(120,120,120)"/></svg>');
+}
+
 
 /* Hero */
 #hero {
@@ -209,7 +210,7 @@ header {
 
 /* Footer */
 #footer {
-  background-color: rgba(120,120,120,.3);
+  background-color: rgba(120,120,120,1);
 }
 #footer .container section {
   background-color: rgba(60,60,60,.3);
