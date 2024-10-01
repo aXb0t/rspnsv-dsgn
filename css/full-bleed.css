@@ -1,0 +1,73 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: 200;
+  line-height: 1.6;
+  padding: 0;
+  background-image: url('../images/grid-100.png');
+  background-size: auto;
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
+
+h6 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+}
