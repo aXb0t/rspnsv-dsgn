@@ -77,6 +77,15 @@ h6 {
   margin-inline: auto;
 }
 
+.mw-min {
+  width: min(100% - 40px, 60rem);
+  margin-inline: auto;
+}
+
 .padding {
-  clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
+  padding-block: clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
+}
+
+.bg-magenta {
+  background: linear-gradient(45deg, magenta 40%, purple 80%);
 }
