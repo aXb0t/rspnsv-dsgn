@@ -89,19 +89,9 @@ h6 {
   }
 
   display: grid;
-  grid-template-columns: 1fr repeat(var(--col-count), calc((min(100% - var(--space-lr), 60rem) (var(--col-count)) - 1 * var(--space-gap)) / var(--col-count))) 1fr;
+  grid-template-columns: 1fr repeat(var(--col-count), calc((min(100% - var(--space-lr), 60rem) - (var(--col-count) - 1) * var(--space-gap)) / var(--col-count))) 1fr;
   gap: var(--space-gap);
 
-  @media (width >= 43.75em) {
-    /* 700px */
-    grid-template-columns: 1fr repeat(6, calc((min(100% - 80px, 60rem) - 5 * 30px) / 6)) 1fr;
-    gap: var(--space-gap);
-  }
-  
-  @media (width >= 62.5em) {
-    /* 1000px */
-    grid-template-columns: 1fr repeat(12, calc((min(100% - 40px, 60rem) - 11 * 30px) / 12)) 1fr;
-  }
 
   .card {
     grid-column: 2 / -2;
