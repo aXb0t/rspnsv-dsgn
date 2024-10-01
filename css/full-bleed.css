@@ -71,3 +71,12 @@ h6 {
   margin-bottom: 0.5em;
   line-height: 1.2;
 }
+
+.mw {
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.padding {
+  clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
+}
