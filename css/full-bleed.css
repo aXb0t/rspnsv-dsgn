@@ -73,14 +73,29 @@ h6 {
 }
 
 .fb-col-wrapper {
+  /* Custom properties */
+  --space-lr: 40px;
+  --space-gap: 20px;
+  --col-count: 2;
+  
+  @media (width >= 43.75em) {
+    --space-lr: 80px;
+    --space-gap: 30px;
+    --col-count: 6;
+  }
+
+  @media (width >= 62.5em) {
+    --col-count: 12;
+  }
+
   display: grid;
-  grid-template-columns: 1fr repeat(2, calc((min(100% - 40px, 60rem) - 1 * 20px) / 2)) 1fr;
-  gap: 20px;
+  grid-template-columns: 1fr repeat(var(--col-count), calc((min(100% - var(--space-lr), 60rem) (var(--col-count)) - 1 * var(--space-gap)) / var(--col-count))) 1fr;
+  gap: var(--space-gap);
 
   @media (width >= 43.75em) {
     /* 700px */
     grid-template-columns: 1fr repeat(6, calc((min(100% - 80px, 60rem) - 5 * 30px) / 6)) 1fr;
-    gap: 30px;
+    gap: var(--space-gap);
   }
   
   @media (width >= 62.5em) {
@@ -125,9 +140,3 @@ img {
 .padding {
   padding-block: clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
 }
-
-/* .bg-image {
-  background-image: url('https://loremflickr.com/800/600/apod');
-  background-size: cover;
-  background-position: center;
-} */
