@@ -79,7 +79,7 @@ h6 {
 
   @media (width >= 43.75em) {
     /* 700px */
-    grid-template-columns: 1fr repeat(12, calc((min(100% - 40px, 60rem) - 11 * 30px) / 12)) 1fr;
+    grid-template-columns: 1fr repeat(6, calc((min(100% - 80px, 60rem) - 5 * 30px) / 6)) 1fr;
     gap: 30px;
   }
   
@@ -91,7 +91,7 @@ h6 {
   .card {
     grid-column: 2 / -2;
     @media (width >= 43.75em) {
-      grid-column: 2 / 8;
+      grid-column: 2 / 5;
     }
     @media (width >= 62.5em) {
       grid-column: 2 / 8;
@@ -101,7 +101,7 @@ h6 {
   img {
     grid-column: 2 / -1;
     @media (width >= 43.75em) {
-      grid-column: 8 / -1;
+      grid-column: 5 / -1;
     }
     @media (width >= 62.5em) {
       grid-column: 8 / -1;
