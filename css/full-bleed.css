@@ -74,24 +74,53 @@ h6 {
 
 .fb-col-wrapper {
   display: grid;
-  grid-template-columns: 1fr repeat(12, calc(min(100% - 40px, 60rem) / 12)) 1fr;
+  grid-template-columns: 1fr repeat(2, calc((min(100% - 40px, 60rem) - 1 * 20px) / 2)) 1fr;
+  gap: 20px;
+
+  @media (width >= 43.75em) {
+    /* 700px */
+    grid-template-columns: 1fr repeat(12, calc((min(100% - 40px, 60rem) - 11 * 30px) / 12)) 1fr;
+    gap: 30px;
+  }
+  
+  @media (width >= 62.5em) {
+    /* 1000px */
+    grid-template-columns: 1fr repeat(12, calc((min(100% - 40px, 60rem) - 11 * 30px) / 12)) 1fr;
+  }
 
   .card {
-    grid-column: 2 / 8;
-
+    grid-column: 2 / -2;
+    @media (width >= 43.75em) {
+      grid-column: 2 / 8;
+    }
+    @media (width >= 62.5em) {
+      grid-column: 2 / 8;
+    }
   }
+
   img {
-    grid-colum: 8 / -1;
-
+    grid-column: 2 / -1;
+    @media (width >= 43.75em) {
+      grid-column: 8 / -1;
+    }
+    @media (width >= 62.5em) {
+      grid-column: 8 / -1;
+    }
   }
+}
+
+/* image fills nicely */
+img {
+  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .bg-blue {
   background: linear-gradient(45deg, #00008B, #8A2BE2);
   color:aliceblue;
 }
-
-
 
 .padding {
   padding-block: clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
