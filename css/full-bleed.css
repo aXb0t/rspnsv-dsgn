@@ -71,21 +71,41 @@ h6 {
   margin-bottom: 0.5em;
   line-height: 1.2;
 }
-
-.mw {
-  max-width: 60rem;
-  margin-inline: auto;
+/* text based full bleed with bg image */
+.fb-wrapper.txt {
+  display: grid;
+  grid-template-columns: 1fr min(100% - 40px, 60rem) 1fr;
+  color: #FFF;
 }
 
-.mw-min {
-  width: min(100% - 40px, 60rem);
-  margin-inline: auto;
+.fb-wrapper.txt > * {
+  grid-column: 2;
+  background-color: transparent; /* Set a default color */
+  background-color: rgba(0, 0, 0, 0.5); /* Set a dark transparent background */
+}
+
+/* full bleed image spans cols */
+.fb-wrapper.img {
+  display: grid;
+}
+
+.fb-wrapper.img > .fullbleed-img {
+  grid-column: 1,-1;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .padding {
   padding-block: clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
 }
 
-.bg-magenta {
-  background: linear-gradient(45deg, magenta 40%, purple 80%);
+.bg-image {
+  background-image: url('https://loremflickr.com/800/600/apod');
+  background-size: cover;
+  background-position: center;
 }
