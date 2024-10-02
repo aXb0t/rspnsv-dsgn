@@ -26,7 +26,6 @@ table {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -74,21 +73,60 @@ h6 {
 }
 
 .fb-col-wrapper {
-  display: grid;
-  grid-template-columns: 1fr repeat(12, calc(min(100% - 40px, 60rem) / 12)) 1fr;
-  gap: 3rem;
-  .card {
-    grid-column: 2 / 8;
+  /* Custom properties */
+  --space-lr: 40px;
+  --space-gap: 20px;
+  --col-count: 2;
+  
+  @media (width >= 43.75em) {
+    --space-lr: 80px;
+    --space-gap: 30px;
+    --col-count: 6;
   }
+
+  @media (width >= 62.5em) {
+    --col-count: 12;
+  }
+
+  display: grid;
+  grid-template-columns: 1fr repeat(var(--col-count), calc((min(100% - var(--space-lr), 60rem) - (var(--col-count) - 1) * var(--space-gap)) / var(--col-count))) 1fr;
+  gap: var(--space-gap);
+
+
+  .card {
+    grid-column: 2 / -2;
+    @media (width >= 43.75em) {
+      grid-column: 2 / 5;
+    }
+    @media (width >= 62.5em) {
+      grid-column: 2 / 8;
+    }
+  }
+
   img {
-    grid-column: 8 / -1;
+    grid-column: 2 / -1;
+    @media (width >= 43.75em) {
+      grid-column: 5 / -1;
+    }
+    @media (width >= 62.5em) {
+      grid-column: 8 / -1;
+    }
   }
 }
 
-.padding {
-  0;
+/* image fills nicely */
+img {
+  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .bg-blue {
-  background: linear-gradient(to right, blue, violet);
+  background: linear-gradient(45deg, #00008B, #8A2BE2);
+  color:aliceblue;
+}
+
+.padding {
+  padding-block: clamp(2rem, 0.1818181818rem + 7.7575757576vw, 6rem);
 }

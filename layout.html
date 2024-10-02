@@ -10,10 +10,10 @@
 
 <body>
   <div class="wrapper">
-    <div class="wrap-row">
+    <div class="wrap-row" id="header">
       <div class="container">
         <header>
-          <h1>Welcome to My Website</h1>
+          <h1>Responsive Website Layout</h1>
           <nav>
             <ul>
               <li><a href="#home">Home</a></li>
@@ -25,11 +25,17 @@
         </header>
       </div>
     </div>
-    <div class="wrap-row" id="hero">
+    <div class="wrap-row angle-bg red" id="hero">
       <div class="container">
         <section class="hero">
-          <h2>Your Hero Title Here</h2>
+          <div class="call-to-action">
+          <h2 class="hero-headline">Your <span class="emphatic">Hero Title Here with Emphasis on Important Words</span> for Better Impact</h2>
           <p>Some engaging content goes here.</p>
+          <button class="hero-button" onclick="location.href='#services'">Get Started</button>
+          </div>
+          <div class="hero-image">
+            <img class="hero-image" src="https://loremflickr.com/800/400/dog" />
+          </div>
         </section>
       </div>
     </div>
@@ -54,10 +60,10 @@
         </section>
       </div>
     </div>
-    <div class="wrap-row" id="pitch">
+    <div class="wrap-row angle-bg" id="pitch">
       <div class="container">
         <section>
-          <h2>Title for Text Section</h2>
+          <h2>Title for Pitch Text Section</h2>
           <h3>Additional Information</h3>
           <p><strong>This is a paragraph</strong> providing <em>more
               information</em> about the topic.</p>
@@ -77,51 +83,37 @@
           <div class="grid-container">
             <div class="card grid">
               <h4>Card 1 Title</h4>
-              <p>This is a description for Card 1.</p>
+              <p>This is a brief description for Card 1.</p>
             </div>
             <div class="card grid">
               <h4>Card 2 Title</h4>
-              <p>This is a description for Card 2.</p>
+              <p>This is a slightly longer description for Card 2 that provides more details about the content.</p>
             </div>
             <div class="card grid">
               <h4>Card 3 Title</h4>
-              <p>This is a description for Card 3.</p>
+              <p>Description for Card 3.</p>
             </div>
             <div class="card grid">
               <h4>Card 4 Title</h4>
-              <p>This is a description for Card 4.</p>
+              <p>This description for Card 4 is a bit more elaborate, explaining the features and benefits.</p>
             </div>
             <div class="card grid">
               <h4>Card 5 Title</h4>
-              <p>This is a description for Card 5.</p>
+              <p>Card 5 has a concise description.</p>
             </div>
             <div class="card grid">
               <h4>Card 6 Title</h4>
-              <p>This is a description for Card 6.</p>
+              <p>This is a detailed description for Card 6, highlighting its unique aspects and advantages.</p>
             </div>
             <div class="card grid">
               <h4>Card 7 Title</h4>
-              <p>This is a description for Card 7.</p>
+              <p>Card 7 features a short description.</p>
             </div>
             <div class="card grid">
               <h4>Card 8 Title</h4>
-              <p>This is a description for Card 8.</p>
+              <p>This is an extensive description for Card 8, providing a comprehensive overview of the topic.</p>
             </div>
           </div>
-        </section>
-      </div>
-    </div>
-    <div class="wrap-row" id="contact">
-      <div class="container">
-        <section>
-          <h2>Contact Us</h2>
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <button type="submit">Submit</button>
-          </form>
         </section>
       </div>
     </div>
@@ -143,6 +135,20 @@
             <label for="newsletter-email">Email:</label>
             <input type="email" id="newsletter-email" name="newsletter-email">
             <button type="submit">Subscribe</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <div class="wrap-row angle-bg gray" id="contact">
+      <div class="container">
+        <section>
+          <h2>Contact Us</h2>
+          <form class="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <button type="submit">Submit</button>
           </form>
         </section>
       </div>
